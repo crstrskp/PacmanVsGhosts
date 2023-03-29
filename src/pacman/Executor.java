@@ -13,6 +13,7 @@ import pacman.controllers.Controller;
 import pacman.controllers.HumanController;
 import pacman.controllers.KeyBoardInput;
 import pacman.controllers.examples.StarterGhosts;
+import pacman.controllers.examples.StarterPacMan;
 import pacman.entries.pacman.MyPacMan;
 import pacman.game.Game;
 import pacman.game.GameView;
@@ -28,8 +29,6 @@ import static pacman.game.Constants.*;
 @SuppressWarnings("unused")
 public class Executor
 {	
-
-
 	/**
 	 * The main method. Several options are listed - simply remove comments to use the option you want.
 	 *
@@ -41,10 +40,10 @@ public class Executor
 		Executor exec=new Executor();
 
 		/* -------------------- BATCH MODE --------------------
-		//run multiple games in batch mode - good for testing.
-		int numTrials=10;
-		exec.runExperiment(new RandomPacMan(),new RandomGhosts(),numTrials);
-		 */
+		//run multiple games in batch mode - good for testing. */
+		int numTrials=100;
+		exec.runExperiment(new StarterPacMan(),new StarterGhosts(),numTrials);
+
 
 		/* -------------------- SYNCHRONOUS MODE --------------------
 		//run a game in synchronous mode: game waits until controllers respond.
@@ -57,8 +56,8 @@ public class Executor
 		//run the game in asynchronous mode.
 		boolean visual=true;
 
-		exec.runGameTimed(new HumanController(new KeyBoardInput()),new StarterGhosts(),visual);
-
+//		exec.runGameTimed(new HumanController(new KeyBoardInput()),new StarterGhosts(),visual);
+//		exec.runGameTimedSpeedOptimised(new StarterPacMan(), new StarterGhosts(), false, visual);
 		//*/
 
 		/* -------------------- ASYNCHRONOUS MODE WITH TIME LIMIT --------------------
