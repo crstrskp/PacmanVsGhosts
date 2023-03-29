@@ -57,7 +57,7 @@ public class Executor
 		//run the game in asynchronous mode.
 		boolean visual=true;
 
-//		exec.runGameTimed(new HumanController(new KeyBoardInput()),new StarterGhosts(),visual);
+		exec.runGameTimed(new HumanController(new KeyBoardInput()),new StarterGhosts(),visual);
 
 		//*/
 
@@ -65,7 +65,7 @@ public class Executor
 		//run the game in asynchronous mode but advance as soon as both controllers are ready  - this is the mode of the competition.
 		//time limit of DELAY ms still applies. */
 
-		exec.runGameTimedSpeedOptimised(new MyPacMan(), new StarterGhosts(), false, true);
+//		exec.runGameTimedSpeedOptimised(new MyPacMan(), new StarterGhosts(), false, true);
 
 		/*
 		
